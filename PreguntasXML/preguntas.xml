@@ -7,7 +7,7 @@
 
 		<type>radio</type>
 
-		<title>1. ¿Cuál de las siguientes opciones no es un lenguaje de programación? </title>
+		<title> Â¿CuÃ¡l de las siguientes opciones no es un lenguaje de programaciÃ³n? </title>
 
 		<options>Java</options>
 
@@ -25,7 +25,7 @@
 
 		<type>radio</type>
 
-		<title>2. ¿A partir de qué lenguaje fue creado C? </title>
+		<title>2. Â¿A partir de quÃ© lenguaje fue creado C? </title>
 
 		<options>B</options>
 
@@ -43,7 +43,7 @@
 
 		<type>checkbox</type>
 
-		<title>3. ¿A partir de qué lenguajes fue creado Java? </title>
+		<title>3. Â¿A partir de quÃ© lenguajes fue creado Java? </title>
 
 		<options>C++</options>
 
@@ -63,7 +63,7 @@
 
 		<type>checkbox</type>
 
-		<title>4. ¿Cuáles de estos lenguajes de programación están orientados al paradigma orientada a objetos?  </title>
+		<title>4. Â¿CuÃ¡les de estos lenguajes de programaciÃ³n estÃ¡n orientados al paradigma orientada a objetos?  </title>
 
 		<options>Ada</options>
 
@@ -88,7 +88,7 @@
 
 		<type>text</type>
 
-		<title>5. ¿En qué año surgió el primer lenguaje de alto nivel? </title>
+		<title>5. Â¿En quÃ© aÃ±o surgiÃ³ el primer lenguaje de alto nivel? </title>
 
 		<answer>1954</answer>
 
@@ -98,7 +98,7 @@
 
 		<type>text</type>
 
-		<title>6. ¿En qué año apareció por primera vez Java? </title>
+		<title>6. Â¿En quÃ© aÃ±o apareciÃ³ por primera vez Java? </title>
 
 		<answer>1995</answer>
 
@@ -108,7 +108,7 @@
 
 		<type>select</type>
 
-		<title>7. ¿Qué lenguaje de programación es considerado de nivel intermedio?</title>
+		<title>7. Â¿QuÃ© lenguaje de programaciÃ³n es considerado de nivel intermedio?</title>
 
 		<options>Java</options>
 
@@ -126,9 +126,9 @@
 
 		<type>select</type>
 
-		<title>8. ¿Cuál es el objetivo de la TDD?</title>
+		<title>8. Â¿CuÃ¡l es el objetivo de la TDD?</title>
 
-		<options>Mantener el código bajo control.</options>
+		<options>Mantener el cÃ³digo bajo control.</options>
 
 		<options>Programar sin el uso de test.</options>
 
@@ -144,7 +144,7 @@
 
 		<type>multiple</type>
 
-		<title>9. ¿Cuáles de las siguientes estructuras de datos en Python son inmutables? </title>
+		<title>9. Â¿CuÃ¡les de las siguientes estructuras de datos en Python son inmutables? </title>
 
 		<options>Listas</options>
 
@@ -164,7 +164,7 @@
 
 		<type>multiple</type>
 
-		<title>10. ¿Cuáles de estos lenguajes de programación están orientados al paradigma funcional? </title>
+		<title>10. Â¿CuÃ¡les de estos lenguajes de programaciÃ³n estÃ¡n orientados al paradigma funcional? </title>
 
 		<options>Java</options>
 
