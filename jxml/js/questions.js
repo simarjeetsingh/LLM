@@ -202,11 +202,11 @@ function corregirRadio1(){
   }   
     if (escorrecta) {
      notaRad1 +=1.0;   
-     darRespuestaHtml("P1: correcta");
+     darRespuestaHtml("P1: Correcta");
      nota +=1.0;    
     } else {
      nota -=1.0;    
-     darRespuestaHtml("P1: incorrecta");     
+     darRespuestaHtml("P1: Incorrecta");     
   }
 }
 
@@ -222,11 +222,11 @@ function corregirRadio2(){
   }   
     if (escorrecta) {
      notaRad2 +=1.0;   
-     darRespuestaHtml("P2: correcta");
+     darRespuestaHtml("P2: Correcta");
      nota +=1.0;    
     } else {
      nota -=1.0;    
-     darRespuestaHtml("P2: incorrecta");     
+     darRespuestaHtml("P2: Incorrecta");     
   }
 }
 // Corregir checkbox ----------------------------
