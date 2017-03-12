@@ -20,7 +20,7 @@ window.onload = function(){
  formElement=document.getElementById('myform');
  formElement.onsubmit=function(){
    inicializar();
-   //if (comprobar()){
+   if (comprobar()){
     corregirRadio1();
     corregirRadio2();
     corregirCheckbox1(); 
@@ -531,34 +531,24 @@ function inicializar(){
 
 //Comprobar que se han introducido datos en el formulario
 function comprobar(){
-   var f=formElement;
-   var checked=false;
-   for (i = 0; i < f.color.length; i++) {  //"color" es el nombre asignado a todos los checkbox
-      if (f.color[i].checked) checked=true;
-   }
-   if(!checked) {    
-    document.getElementsByTagName("h3")[0].focus();
-    alert("Selecciona una opción del radio");
+	var f=formElement;
+	var checked=false;
+  var checked1 = false;
+  	
+	for (i = 0; i < f.colorR1.length; i++) {
+		if (f.colorR1[i].checked) checked=true;
+  }  
+  
+  for (i = 0; i < f.colorR2.length; i++) {
+		if (f.colorR2[i].checked) checked1=true;
+	}
+  if(!checked){
+    alert("Selecciona una opción de la primera pregunta.");
+    document.getElementsByTagName("h3")[0].scrollIntoView();    
     return false;
-   }else if(!checked) {    
-    document.getElementsByTagName("h3")[1].focus();
-    alert("Selecciona una opción del radio");
+  } else if (!checked1){
+    alert("Selecciona una opción de la segunda pregunta.");
+    document.getElementsByTagName("h3")[1].scrollIntoView();    
     return false;
-   }else if(!checked) {    
-    document.getElementsByTagName("h3")[2].focus();
-    alert("Selecciona una opción del checkbox");
-    return false;
-   }else if (f.elements[0].value=="") {
-    f.elements[0].focus();
-    alert("Escribe un número");
-    return false;
-   } else if (f.elements[1].selectedIndex==0) {
-    f.elements[1].focus();
-    alert("Selecciona una opción");
-    return false;
-   } if (!checked) {    
-    document.getElementsByTagName("h3")[2].focus();
-    alert("Selecciona una opción del checkbox");
-    return false;
-   } else  return true;
+  } else return true;
 }
