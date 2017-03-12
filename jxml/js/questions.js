@@ -9,7 +9,7 @@ var respuestasRadio1= null;
 var respuestasRadio2 = null;
 var respuestasCheckbox1 = [];
 var respuestasCheckbox2 = [];
-var nota = 0;  //nota de la prueba sobre 3 puntos (hay 3 preguntas)
+var nota = 0;  //nota de la prueba sobre 10 puntos (hay 10 preguntas)
 var xmlDoc = null;
 
 //**************************************************************************************************** 
@@ -154,8 +154,7 @@ function gestionarXml(dadesXml){
  for (i = 0; i < nres; i++) {
    respuestasMultiple1[i]=xmlDoc.getElementById("jdos_009").getElementsByTagName("answer")[i].innerHTML;
  }
- //respuestaSelectMultiple1=parseInt(xmlDoc.getElementsByTagName("answer")[8].innerHTML);
-
+ 
 //Select multiple 2
  var selectMultiple2=xmlDoc.getElementsByTagName("title")[9].innerHTML;
  var opcionesSelectMultiple2 = [];
@@ -168,9 +167,7 @@ function gestionarXml(dadesXml){
  for (i = 0; i < nres; i++) {
    respuestasMultiple2[i]=xmlDoc.getElementById("jdos_010").getElementsByTagName("answer")[i].innerHTML;
  }
- //respuestaSelectMultiple2=parseInt(xmlDoc.getElementsByTagName("answer")[9].innerHTML);
-
-
+ 
 }
 //Seleccionar sin pulsar la tecla ctrl
  window.onmousedown = function (e) {
@@ -230,13 +227,12 @@ function corregirRadio2(){
   }
 }
 // Corregir checkbox ----------------------------
-//Si necesitáis ayuda para hacer un corregirRadio() decirlo, lo ideal es que a podáis construirla modificando corregirCheckbox
 function corregirCheckbox1(){
   //Para cada opción mira si está checkeada, si está checkeada mira si es correcta y lo guarda en un array escorrecta[]
   var f=formElement;
   var escorrecta = [];
   var notaCheckbox1 = 0;
-  for (i = 0; i < f.colorCBX1.length; i++) {  //"color" es el nombre asignado a todos los checkbox
+  for (i = 0; i < f.colorCBX1.length; i++) {  //"colorCBX1" es el nombre asignado a todos los checkbox
    if (f.colorCBX1[i].checked) {
     escorrecta[i]=false;     
     for (j = 0; j < respuestasCheckbox1.length; j++) {
@@ -256,9 +252,7 @@ function corregirCheckbox1(){
       darRespuestaHtml("P3: Semicorrecta"); 
     }else  if(notaCheckbox1 == 0){
       darRespuestaHtml("P3: Incorrecta")
-    }else   darRespuestaHtml("P3: Correcta");
-       
-   
+    }else   darRespuestaHtml("P3: Correcta");      
 }
 
 function corregirCheckbox2(){
@@ -288,20 +282,7 @@ function corregirCheckbox2(){
     }else   darRespuestaHtml("P4: Correcta");
          
 }
-    
-    //si es correcta sumamos y ponemos mensaje, si no es correcta restamos y ponemos mensaje.
-   /* if (escorrecta2[i]) {
-      notaCheckbox2 +=1.0/respuestasCheckbox2.length;
-      nota +=1.0/respuestasCheckbox2.length;  //dividido por el número de respuestas correctas   
-      darRespuestaHtml("P4: "+i+" correcta");    
-    } else {
-     nota -=1.0/respuestasCheckbox2.length;  //dividido por el número de respuestas correctas   
-     darRespuestaHtml("P4: "+i+" incorrecta");
-    }   
-   } 
-  }
-}*/
-
+      
 function corregirNumber1(){
   //Vosotros debéis comparar el texto escrito con el texto que hay en el xml
   //en este ejemplo hace una comparación de números enteros
@@ -318,9 +299,6 @@ function corregirNumber1(){
 }
 
 function corregirNumber2(){
-
-  //Vosotros debéis comparar el texto escrito con el texto que hay en el xml
-  //en este ejemplo hace una comparación de números enteros
   //var s = formElement.elements[5].value;    
   var s = document.getElementById("num2").value;
     if (s==numeroSecreto2) {
@@ -334,9 +312,7 @@ function corregirNumber2(){
   }
 
 function corregirSelect1(){
-  //Compara el índice seleccionado con el valor del íncide que hay en el xml (<answer>2</answer>)
-  //para implementarlo con type radio, usar value para enumerar las opciones <input type='radio' value='1'>...
-  //luego comparar ese value con el value guardado en answer
+  
   //var sel = formElement.elements[6]; 
   var sel = document.getElementById("sel1");  
     if (sel.selectedIndex-1==respuestaSelect1) { //-1 porque hemos puesto una opción por defecto en el select que ocupa la posición 0
