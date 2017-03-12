@@ -20,18 +20,18 @@ window.onload = function(){
  formElement=document.getElementById('myform');
  formElement.onsubmit=function(){
    inicializar();
-   if (comprobar()){
-    corregirRadio1();
-    corregirRadio2();
-    corregirCheckbox1(); 
-    corregirCheckbox2();
-    corregirNumber1();
-    corregirNumber2();
-    corregirSelect1();
-    corregirSelect2();
-    corregirSelectMultiple1();
-    corregirSelectMultiple2();
-    presentarNota();
+   if (comprobar()){      
+      corregirRadio1();
+      corregirRadio2();
+      corregirCheckbox1(); 
+      corregirCheckbox2();
+      corregirNumber1();
+      corregirNumber2();
+      corregirSelect1();
+      corregirSelect2();
+      corregirSelectMultiple1();
+      corregirSelectMultiple2();
+      presentarNota();
    }
   return false;
  }
@@ -529,6 +529,7 @@ function inicializar(){
    nota=0.0;
 }
 
+
 //Comprobar que se han introducido datos en el formulario
 function comprobar(){
 	var f=formElement;
@@ -552,3 +553,5 @@ function comprobar(){
     return false;
   } else return true;
 }
+
+
