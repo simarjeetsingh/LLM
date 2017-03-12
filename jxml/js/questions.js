@@ -534,24 +534,24 @@ function inicializar(){
 function comprobar(){
 	var f=formElement;
 	var checked=false;
-  var checked1 = false;
+  	var checked1 = false;
   	
 	for (i = 0; i < f.colorR1.length; i++) {
 		if (f.colorR1[i].checked) checked=true;
-  }  
-  
-  for (i = 0; i < f.colorR2.length; i++) {
+  	}  
+	
+	for (i = 0; i < f.colorR2.length; i++) {
 		if (f.colorR2[i].checked) checked1=true;
 	}
-  if(!checked){
-    alert("Selecciona una opción de la primera pregunta.");
-    document.getElementsByTagName("h3")[0].scrollIntoView();    
-    return false;
-  } else if (!checked1){
-    alert("Selecciona una opción de la segunda pregunta.");
-    document.getElementsByTagName("h3")[1].scrollIntoView();    
-    return false;
-  } else return true;
+	if(!checked){
+		alert("Selecciona una opción de la primera pregunta.");
+		document.getElementsByTagName("h3")[0].scrollIntoView();    
+	    	return false;
+	  	} else if (!checked1){
+			alert("Selecciona una opción de la segunda pregunta.");
+			document.getElementsByTagName("h3")[1].scrollIntoView();   
+			return false;
+			} else return true;
 }
 
 
