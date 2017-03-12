@@ -1,6 +1,8 @@
 # Creación de un examen con autocorrección.
 
-Realizado mediante Xml, Html, Css y JavaScript
+Realizado mediante Xml, Html, Css y JavaScript.
+
+Las preguntas están relacionadas con la programación.
 
 El examnen tiene 10 preguntas de los siguientes tipos:
 
