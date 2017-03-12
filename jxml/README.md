@@ -4,7 +4,7 @@ Realizado mediante Xml, Html, Css y JavaScript.
 
 Las preguntas están relacionadas con la programación.
 
-El examnen tiene 10 preguntas de los siguientes tipos:
+El examen tiene 10 preguntas de los siguientes tipos:
 
 - Dos preguntas tipo RADIO.
 - Dos preguntas tipo CHECKBOX.
