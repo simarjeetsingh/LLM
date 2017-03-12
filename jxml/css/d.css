@@ -1,10 +1,12 @@
 body,html{margin:0px}
-body{background-color:white;width:70%;padding-left:15%;padding-right:15%}
+body{width:70%;padding-left:15%;padding-right:15%}
+#uniLogo{background-color: floralwhite }
 .uniIcon{width:100%}
 body,input,select,label{font-size:2vw}
-h3{font-size:3vw}
-h2{background-color: darkslategrey; text-align: center}
+h3{font-size:3vw; color: royalblue}
+h2{background-color: lightgray; text-align: center;border-radius: 5px}
 input,select{width:50%}
 input[type=checkbox]{width:5%;zoom:1.5}
 input[type=radio]{width:5%;zoom:1.5}
-form{background-color:#FFA07A ;padding:3%}
+form{background-color:whitesmoke ;padding:3%}
+#pregunta{font-family:Verdana;font-size:1vm;width:auto;margin:1px 1px;padding:1px 10px;height:auto}
