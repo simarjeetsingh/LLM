@@ -528,31 +528,70 @@ function inicializar(){
    document.getElementById('resultadosDiv').innerHTML = "";
    nota=0.0;
 }
-
-
 //Comprobar que se han introducido datos en el formulario
 function comprobar(){
 	var f=formElement;
 	var checked=false;
-  	var checked1 = false;
+  var checked1=false;
+  var checked2=false;
+  var checked3=false;
   	
 	for (i = 0; i < f.colorR1.length; i++) {
 		if (f.colorR1[i].checked) checked=true;
-  	}  
-	
-	for (i = 0; i < f.colorR2.length; i++) {
+  }
+  for (i = 0; i < f.colorR2.length; i++) {
 		if (f.colorR2[i].checked) checked1=true;
 	}
-	if(!checked){
-		alert("Selecciona una opción de la primera pregunta.");
-		document.getElementsByTagName("h3")[0].scrollIntoView();    
-	    	return false;
-	  	} else if (!checked1){
-			alert("Selecciona una opción de la segunda pregunta.");
-			document.getElementsByTagName("h3")[1].scrollIntoView();   
-			return false;
-			} else return true;
+  for (i = 0; i < f.colorCBX1.length; i++) {
+		if (f.colorCBX1[i].checked) checked2=true;
+	}
+  for (i = 0; i < f.colorCBX2.length; i++) {
+		if (f.colorCBX2[i].checked) checked3=true;
+	}
+  if(!checked){
+    alert("Selecciona una opción de la pregunta 1.");
+    document.getElementsByTagName("h3")[0].scrollIntoView();    
+    return false;
+  } else if (!checked1){
+    alert("Selecciona una opción de la pregunta 2.");
+    document.getElementsByTagName("h3")[1].scrollIntoView();    
+    return false;
+  } else if (!checked2){
+    alert("Selecciona una opción de la pregunta 3.");
+    document.getElementsByTagName("h3")[2].scrollIntoView();    
+    return false;
+  } else if (!checked3){
+    alert("Selecciona una opción de la pregunta 4.");
+    document.getElementsByTagName("h3")[3].scrollIntoView();    
+    return false;  
+  } else if (document.getElementById("num1").value == ""){
+    alert("Introduzca un número en la pregunta 5.");
+    document.getElementsByTagName("h3")[4].scrollIntoView();    
+    return false; 
+  } else if (document.getElementById("num2").value == ""){
+    alert("Introduzca un número en la pregunta 6.");
+    document.getElementsByTagName("h3")[5].scrollIntoView();    
+    return false;      
+  } else if (document.getElementById("sel1").selectedIndex==0){
+    alert("Selecciona una opción de la pregunta 7.");
+    document.getElementsByTagName("h3")[6].scrollIntoView();    
+    return false;    
+  } else if (document.getElementById("sel2").selectedIndex==0){
+    alert("Selecciona una opción de la pregunta 8.");
+    document.getElementsByTagName("h3")[7].scrollIntoView();    
+    return false;   
+  } else if (document.getElementById("selM1").selectedIndex==-1){
+    alert("Selecciona una opción de la pregunta 9.");
+    document.getElementsByTagName("h3")[8].scrollIntoView();    
+    return false;    
+  } else if (document.getElementById("selM2").selectedIndex==-1){
+    alert("Selecciona una opción de la pregunta 10.");
+    document.getElementsByTagName("h3")[9].scrollIntoView();    
+    return false;   
+  } else return true;
 }
+
+
 
 
 
