@@ -32,7 +32,7 @@ window.onload = function(){
     corregirSelectMultiple1();
     corregirSelectMultiple2();
     presentarNota();
-   //}
+   }
   return false;
  }
  
