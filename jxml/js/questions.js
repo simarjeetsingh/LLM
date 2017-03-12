@@ -43,7 +43,7 @@ window.onload = function(){
    gestionarXml(this);
   }
  };
- xhttp.open("GET", "https://rawgit.com/simarjeetsingh/LLM/master/PreguntasXML/Validaci%C3%B3n%20XML%20con%20XSD/questions.xml", true);
+ xhttp.open("GET", "xml/questions.xml", true);
  xhttp.send();
 }
 
