@@ -166,9 +166,9 @@ function gestionarXml(dadesXml){
  var nres = xmlDoc.getElementById("jdos_010").getElementsByTagName('answer').length;
  for (i = 0; i < nres; i++) {
    respuestasMultiple2[i]=xmlDoc.getElementById("jdos_010").getElementsByTagName("answer")[i].innerHTML;
- }
- 
+ } 
 }
+
 //Seleccionar sin pulsar la tecla ctrl
  window.onmousedown = function (e) {
     var el = e.target;
@@ -252,7 +252,7 @@ function corregirCheckbox1(){
       darRespuestaHtml("P3: Semicorrecta"); 
     }else  if(notaCheckbox1 == 0){
       darRespuestaHtml("P3: Incorrecta")
-    }else   darRespuestaHtml("P3: Correcta");      
+    }else   darRespuestaHtml("P3: Correcta");       
 }
 
 function corregirCheckbox2(){
@@ -260,7 +260,7 @@ function corregirCheckbox2(){
   var f=formElement;
   var escorrecta2 = [];
   var notaCheckbox2 = 0;
-  for (i = 0; i < f.colorCBX2.length; i++) {  //"color" es el nombre asignado a todos los checkbox
+  for (i = 0; i < f.colorCBX2.length; i++) {  //"colorCBX2" es el nombre asignado a todos los checkbox
    if (f.colorCBX2[i].checked) {
     escorrecta2[i]=false;     
     for (j = 0; j < respuestasCheckbox2.length; j++) {
@@ -282,14 +282,21 @@ function corregirCheckbox2(){
     }else   darRespuestaHtml("P4: Correcta");
          
 }
-      
-function corregirNumber1(){
-  //Vosotros debéis comparar el texto escrito con el texto que hay en el xml
-  //en este ejemplo hace una comparación de números enteros
+    
+   /* if (escorrecta2[i]) {
+      notaCheckbox2 +=1.0/respuestasCheckbox2.length;
+      nota +=1.0/respuestasCheckbox2.length;  //dividido por el número de respuestas correctas   
+      darRespuestaHtml("P4: "+i+" Correcta");    
+    } else {
+     nota -=1.0/respuestasCheckbox2.length;  //dividido por el número de respuestas correctas   
+     darRespuestaHtml("P4: "+i+" Incorrecta");
+    }*/
+
+function corregirNumber1(){ 
   //var s = formElement.elements[4].value;  
   var s=document.getElementById("num1").value;     
     if (s==numeroSecreto1) {
-      darRespuestaHtml("P5: Correcto");
+      darRespuestaHtml("P5: Correcta");
       nota +=1;
     }
     else {
@@ -302,7 +309,7 @@ function corregirNumber2(){
   //var s = formElement.elements[5].value;    
   var s = document.getElementById("num2").value;
     if (s==numeroSecreto2) {
-    darRespuestaHtml("P6: Correcto");
+    darRespuestaHtml("P6: Correcta");
     nota +=1;
     }
     else {
@@ -312,14 +319,13 @@ function corregirNumber2(){
   }
 
 function corregirSelect1(){
-  
   //var sel = formElement.elements[6]; 
   var sel = document.getElementById("sel1");  
     if (sel.selectedIndex-1==respuestaSelect1) { //-1 porque hemos puesto una opción por defecto en el select que ocupa la posición 0
-    darRespuestaHtml("P7: Correcto");
+    darRespuestaHtml("P7: Correcta");
     nota +=1;
     }
-    else darRespuestaHtml("P7: Incorrecto");
+    else darRespuestaHtml("P7: Incorrecta");
 }
 function corregirSelect2(){
   //var sel = formElement.elements[6]; 
@@ -330,7 +336,7 @@ function corregirSelect2(){
     }
     else darRespuestaHtml("P8: Incorrecta");
 }
-// Corregir Select multiple  ********************
+// Corregir Select multiple  
 
 function corregirSelectMultiple1(){
 	//var f = formElement;
@@ -511,6 +517,7 @@ function darRespuestaHtml(r){
  var node = document.createTextNode(r);
  p.appendChild(node);
  document.getElementById('resultadosDiv').appendChild(p);
+ document.getElementById('resultadosDiv').style.display = "block";
 }
 
 function presentarNota(){
